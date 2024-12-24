@@ -14,9 +14,15 @@
 <body>
 
 <button onclick="pythonFunction()">Click me</button>
+
+<button onclick="jsFunction()">Button 2</button>
     
 <script type="text/javascript">
     circle = {surface: function(r){return 3.14 * r * r}}
+
+    function jsFunction() {
+        console.log(pythonList);
+    }
 </script>
 <script type="text/python">
 from browser import document, window
@@ -26,6 +32,7 @@ def pythonFunction():
     return "called python!"
 
 window.pythonFunction = pythonFunction
+window.pythonList = ["apple", "banana", "cherry"]
     
 value = "Hello ! " + str(window.circle.surface(10))
 document <= value
