@@ -13,12 +13,20 @@
 
 <body>
 
+<button onclick="pythonFunction()">Click me</button>
+    
 <script type="text/javascript">
     circle = {surface: function(r){return 3.14 * r * r}}
 </script>
 <script type="text/python">
 from browser import document, window
 
+def pythonFunction():
+    document <= "called python..."
+    return "called python!"
+
+window.pythonFunction = pythonFunction
+    
 value = "Hello ! " + str(window.circle.surface(10))
 document <= value
 </script>
