@@ -13,10 +13,14 @@
 
 <body>
 
+<script type="text/javascript">
+    circle = {surface: function(r){return 3.14 * r * r}}
+</script>
 <script type="text/python">
 from browser import document
 
-document <= "Hello !"
+value = "Hello ! " + window.circle.surface(10)
+document <= value
 </script>
 
 
